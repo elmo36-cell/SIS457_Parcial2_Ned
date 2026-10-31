@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrograma));
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.lblClasificacion = new System.Windows.Forms.Label();
+            this.cbxClasificacion = new System.Windows.Forms.ComboBox();
             this.cbxDiaSemana = new System.Windows.Forms.ComboBox();
             this.mtbHoraFin = new System.Windows.Forms.MaskedTextBox();
             this.mtbHoraInicio = new System.Windows.Forms.MaskedTextBox();
@@ -62,6 +64,7 @@
             this.erpHoraFin = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpDiaSemana = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpConductor = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpClasificacion = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbxDatos.SuspendLayout();
             this.pnlAcciones.SuspendLayout();
             this.gbxLista.SuspendLayout();
@@ -72,10 +75,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.erpHoraFin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDiaSemana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpConductor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpClasificacion)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxDatos
             // 
+            this.gbxDatos.Controls.Add(this.lblClasificacion);
+            this.gbxDatos.Controls.Add(this.cbxClasificacion);
             this.gbxDatos.Controls.Add(this.cbxDiaSemana);
             this.gbxDatos.Controls.Add(this.mtbHoraFin);
             this.gbxDatos.Controls.Add(this.mtbHoraInicio);
@@ -97,6 +103,23 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
             // 
+            // lblClasificacion
+            // 
+            this.lblClasificacion.AutoSize = true;
+            this.lblClasificacion.Location = new System.Drawing.Point(396, 46);
+            this.lblClasificacion.Name = "lblClasificacion";
+            this.lblClasificacion.Size = new System.Drawing.Size(96, 18);
+            this.lblClasificacion.TabIndex = 17;
+            this.lblClasificacion.Text = "Clasificación:";
+            // 
+            // cbxClasificacion
+            // 
+            this.cbxClasificacion.FormattingEnabled = true;
+            this.cbxClasificacion.Location = new System.Drawing.Point(520, 40);
+            this.cbxClasificacion.Name = "cbxClasificacion";
+            this.cbxClasificacion.Size = new System.Drawing.Size(121, 26);
+            this.cbxClasificacion.TabIndex = 16;
+            // 
             // cbxDiaSemana
             // 
             this.cbxDiaSemana.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -108,10 +131,10 @@
             // 
             // mtbHoraFin
             // 
-            this.mtbHoraFin.Location = new System.Drawing.Point(422, 42);
+            this.mtbHoraFin.Location = new System.Drawing.Point(303, 42);
             this.mtbHoraFin.Mask = "00:00";
             this.mtbHoraFin.Name = "mtbHoraFin";
-            this.mtbHoraFin.Size = new System.Drawing.Size(219, 24);
+            this.mtbHoraFin.Size = new System.Drawing.Size(73, 24);
             this.mtbHoraFin.TabIndex = 14;
             this.mtbHoraFin.ValidatingType = typeof(System.DateTime);
             // 
@@ -120,7 +143,7 @@
             this.mtbHoraInicio.Location = new System.Drawing.Point(107, 42);
             this.mtbHoraInicio.Mask = "00:00";
             this.mtbHoraInicio.Name = "mtbHoraInicio";
-            this.mtbHoraInicio.Size = new System.Drawing.Size(219, 24);
+            this.mtbHoraInicio.Size = new System.Drawing.Size(77, 24);
             this.mtbHoraInicio.TabIndex = 13;
             this.mtbHoraInicio.ValidatingType = typeof(System.DateTime);
             // 
@@ -170,7 +193,7 @@
             // lblHoraFin
             // 
             this.lblHoraFin.AutoSize = true;
-            this.lblHoraFin.Location = new System.Drawing.Point(332, 48);
+            this.lblHoraFin.Location = new System.Drawing.Point(213, 48);
             this.lblHoraFin.Name = "lblHoraFin";
             this.lblHoraFin.Size = new System.Drawing.Size(69, 18);
             this.lblHoraFin.TabIndex = 8;
@@ -358,6 +381,7 @@
             this.lblTitulo.TabIndex = 12;
             this.lblTitulo.Text = "Programas";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // erpCanal
             // 
@@ -382,6 +406,10 @@
             // erpConductor
             // 
             this.erpConductor.ContainerControl = this;
+            // 
+            // erpClasificacion
+            // 
+            this.erpClasificacion.ContainerControl = this;
             // 
             // FrmPrograma
             // 
@@ -414,6 +442,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.erpHoraFin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpDiaSemana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpConductor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpClasificacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,6 +482,9 @@
         private System.Windows.Forms.MaskedTextBox mtbHoraInicio;
         private System.Windows.Forms.ComboBox cbxDiaSemana;
         private System.Windows.Forms.MaskedTextBox mtbHoraFin;
+        private System.Windows.Forms.Label lblClasificacion;
+        private System.Windows.Forms.ComboBox cbxClasificacion;
+        private System.Windows.Forms.ErrorProvider erpClasificacion;
     }
 }
 

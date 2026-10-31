@@ -22,6 +22,7 @@
     <Property Name="horaInicio" Type="Time" Nullable="false" Precision="7" />
     <Property Name="horaFin" Type="Time" Nullable="false" Precision="7" />
     <Property Name="diaSemana" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clasificacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="conductorPrincipal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
@@ -40,7 +41,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Parcial2NedEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="Parcial2NedEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Canal" EntityType="Self.Canal" />
     <EntitySet Name="HorarioPrograma" EntityType="Self.HorarioPrograma" />
     <AssociationSet Name="fk_HorarioPrograma_Canal" Association="Self.fk_HorarioPrograma_Canal">
@@ -70,6 +71,7 @@
     <Property Type="Time" Name="horaInicio" Nullable="false" />
     <Property Type="Time" Name="horaFin" Nullable="false" />
     <Property Type="String" Name="diaSemana" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="clasificacion" Nullable="true" MaxLength="10" />
     <Property Type="String" Name="conductorPrincipal" Nullable="false" MaxLength="100" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />

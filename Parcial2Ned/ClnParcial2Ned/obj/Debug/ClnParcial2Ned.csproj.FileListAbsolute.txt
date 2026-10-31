@@ -1,15 +1,2 @@
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\bin\Debug\ClnParcial2Ned.dll.config
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\bin\Debug\ClnParcial2Ned.dll
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\bin\Debug\ClnParcial2Ned.pdb
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\bin\Debug\CadParcial2Ned.dll
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\bin\Debug\EntityFramework.dll
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\bin\Debug\EntityFramework.SqlServer.dll
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\bin\Debug\CadParcial2Ned.pdb
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\bin\Debug\CadParcial2Ned.dll.config
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\bin\Debug\EntityFramework.xml
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\bin\Debug\EntityFramework.SqlServer.xml
 D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\obj\Debug\ClnParcial2Ned.csproj.AssemblyReference.cache
 D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\obj\Debug\ClnParcial2Ned.csproj.CoreCompileInputs.cache
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\obj\Debug\ClnParci.CA088C4C.Up2Date
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\obj\Debug\ClnParcial2Ned.dll
-D:\Parcial2Ned\Parcial2Ned\ClnParcial2Ned\obj\Debug\ClnParcial2Ned.pdb

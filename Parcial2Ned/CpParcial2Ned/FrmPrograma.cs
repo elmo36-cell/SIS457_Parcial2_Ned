@@ -33,6 +33,7 @@ namespace CpParcial2Ned
             dgvLista.Columns["horaInicio"].HeaderText = "Hora Inicio";
             dgvLista.Columns["horaFin"].HeaderText = "Hora Fin";
             dgvLista.Columns["diaSemana"].HeaderText = "Día de Semana";
+            dgvLista.Columns["clasificacion"].HeaderText = "Clasificación";
             dgvLista.Columns["conductorPrincipal"].HeaderText = "Conductor Principal";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
@@ -65,6 +66,17 @@ namespace CpParcial2Ned
             cbxDiaSemana.SelectedIndex = -1;
         }
 
+        private void cargarClasificaciones()
+        {
+            cbxClasificacion.Items.Clear();
+            cbxClasificacion.Items.Add("ATB");
+            cbxClasificacion.Items.Add("10+");
+            cbxClasificacion.Items.Add("13+");
+            cbxClasificacion.Items.Add("18+");
+
+            cbxClasificacion.SelectedIndex = -1;
+        }
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             listar();
@@ -76,6 +88,7 @@ namespace CpParcial2Ned
             listar();
             cargarCanales();
             cargarDiasSemana();
+            cargarClasificaciones();
         }
 
         private void txtParametro_KeyPress(object sender, KeyPressEventArgs e)
@@ -89,6 +102,7 @@ namespace CpParcial2Ned
             mtbHoraInicio.Clear();
             mtbHoraFin.Clear();
             cbxDiaSemana.SelectedIndex = -1;
+            cbxClasificacion.SelectedIndex = -1;
             txtConductor.Clear();
             resetearErrores();
         }
@@ -103,6 +117,7 @@ namespace CpParcial2Ned
             erpHoraInicio.Clear();
             erpHoraFin.Clear();
             erpDiaSemana.Clear();
+            erpClasificacion.Clear();
             erpConductor.Clear();
         }
 
@@ -128,6 +143,7 @@ namespace CpParcial2Ned
             mtbHoraInicio.Text = horario.horaInicio.ToString(@"hh\:mm");
             mtbHoraFin.Text = horario.horaFin.ToString(@"hh\:mm");
             cbxDiaSemana.Text = horario.diaSemana;
+            cbxClasificacion.Text = horario.clasificacion;
             txtConductor.Text = horario.conductorPrincipal;
         }
 
@@ -171,6 +187,11 @@ namespace CpParcial2Ned
                 erpConductor.SetError(txtConductor, "El conductor principal es obligatorio");
                 esValido = false;
             }
+            if (cbxClasificacion.SelectedIndex == -1 && string.IsNullOrWhiteSpace(cbxClasificacion.Text))
+            {
+                erpClasificacion.SetError(cbxClasificacion, "Seleccione una clasificación obligatoria");
+                esValido = false;
+            }
 
             return esValido;
         }
@@ -186,6 +207,7 @@ namespace CpParcial2Ned
                     horaInicio = TimeSpan.Parse(mtbHoraInicio.Text.Trim()),
                     horaFin = TimeSpan.Parse(mtbHoraFin.Text.Trim()),
                     diaSemana = cbxDiaSemana.Text.Trim(),
+                    clasificacion = cbxClasificacion.Text.Trim(),
                     conductorPrincipal = txtConductor.Text.Trim(),
                     usuarioRegistro = "usrparcial2"
                 };
@@ -248,6 +270,11 @@ namespace CpParcial2Ned
                     e.FormattingApplied = true;
                 }
             }
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

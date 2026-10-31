@@ -21,6 +21,7 @@
     <Property Name="horaInicio" Type="time" Precision="7" Nullable="false" />
     <Property Name="horaFin" Type="time" Precision="7" Nullable="false" />
     <Property Name="diaSemana" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="clasificacion" Type="varchar" MaxLength="10" />
     <Property Name="conductorPrincipal" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
